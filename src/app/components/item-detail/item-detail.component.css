@@ -1,0 +1,58 @@
+.btn-flat {
+  padding: 0 .5rem;
+}
+.item {
+  display: flex;
+}
+.item > div {
+  flex: 1;
+}
+.item > div:last-child {
+  text-align: right;
+}
+
+
+
+/* Edit Button style */
+.edit-button, .edit-button:focus {
+  background: #ccc;
+  border: 0px;
+  border-radius: 2px;
+}
+/* Delete button style */
+.delete-button {
+  background:#c0392b;
+  color: #fff;
+}
+.delete-button:hover {
+  background:#c0392b;
+  opacity: 0.7;
+}
+/* Cancel button */
+.cancel-button {
+  background: #7f8c8d;
+  color: #fff;
+}
+.cancel-button:hover {
+  background:#7f8c8d;
+  opacity: 0.7;
+}
+/* Save button */
+.save-button {
+  background: #16a085;
+  color: #fff;
+}
+.save-button:hover {
+  background:#16a085;
+  opacity: 0.7;
+}
+
+/* Edit product form */
+.edit-product-form input:focus {
+  border-bottom: 1px solid #ccab5c!important;
+  box-shadow: 0px 1px 0px 0px #ccab5c!important;
+}
+.edit-product-form input:focus + label {
+  color: #ccab5c!important;
+}
+

@@ -1,0 +1,24 @@
+.main-content {
+  position: absolute;
+  top: 13%;
+  width: 100%;
+}
+.log-out {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.log-out > button.logout-btn {
+  text-decoration: none;
+  background-color: #ddd;
+  color: #000;
+  padding: 0px 12px;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+}
+.log-out > button.logout-btn:hover {
+  background: #ccab5c;
+}

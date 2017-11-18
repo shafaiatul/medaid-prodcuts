@@ -1,0 +1,48 @@
+<mz-card
+[hoverable]="true">
+  <mz-card-content>
+    <div class="searh-box">
+      <input type="text" placeholder="Seach..." [(ngModel)]="term">
+    </div>
+    <mz-collection >
+        <div *ngIf="items?.length > 0;else noItems" >
+            <mz-collection-item>
+              <div class="item-title">
+                <div><span class="chip">Product Name</span></div>
+                <div><span class="chip">Barcode</span></div>
+                <div><span class="chip">Price</span></div>
+                <div>
+                    <div class="total-products">
+                        <p>Total Products
+                          <span>
+                              {{items?.length}}
+                          </span>
+                        </p>
+                      </div>
+                </div>
+              </div>
+            </mz-collection-item>
+            <div class="items-container">
+              <mz-collection-item *ngFor="let item of items | filter:term;">
+                  <app-item-detail
+                    [detail]= "item"
+                    (remove)="handleRemove($event)"
+                    (edit)="handleEdit($event)"
+                    (refresh)="handleRefreshData($event)">
+                  </app-item-detail>
+              </mz-collection-item>
+            </div>
+
+
+        </div>
+        <ng-template #noItems>
+          <p>There are no Items to show :(</p>
+        </ng-template>
+
+    </mz-collection>
+  </mz-card-content>
+
+</mz-card>
+
+
+

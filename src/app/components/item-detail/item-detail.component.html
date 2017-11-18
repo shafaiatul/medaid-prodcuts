@@ -1,0 +1,69 @@
+<div class="item">
+  <div>{{detail.ProductName}}</div>
+  <div>{{detail.Barcode}}</div>
+  <div>{{detail.Price | currency}}</div>
+  <div>
+      <button class="edit-button"
+        mz-tooltip
+        [tooltip]="'Edit'"
+        [position]="'left'"
+        [html]="true"
+        [delay]="50"
+        (click)="bottomSheetModal.open()">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+      </button>
+  </div>
+</div>
+
+<form>
+  <mz-modal #bottomSheetModal [fixedFooter]="true" [bottomSheet]="true" [options]="modalOptions">
+      <mz-modal-header>
+        {{detail.ProductName}}
+      </mz-modal-header>
+      <mz-modal-content>
+          <div class="row edit-product-form">
+            <div class="input-field col s4">
+              <input id="product_name" type="text" class="validate"
+              [value]="detail.ProductName"
+              (input)="onProductNameChange(name.value)"
+               #name>
+              <label for="product_name">Product Name</label>
+            </div>
+            <div class="input-field col s4">
+              <input id="barcode" type="text" class="validate"
+              [value]="detail.Barcode"
+              (input)="onBarcodeChange(barcode.value)"
+              #barcode>
+              <label for="barcode">Barcode</label>
+            </div>
+            <div class="input-field col s4">
+              <input id="product_price" type="number" step=any class="validate"
+              [value]="detail.Price"
+              (input)="onPriceChange(price.value)"
+              #price>
+              <label for="product_price">Price</label>
+            </div>
+          </div>
+      </mz-modal-content>
+      <mz-modal-footer>
+        <button class="left delete-button" mz-button [flat]="true" mz-modal-close
+        (click)="onRemove()">Delete
+            &nbsp;&nbsp;
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+        </button>
+        <button class="cancel-button" mz-button [flat]="true" mz-modal-close
+        (click)="onRefresh()">Cancel
+            &nbsp;&nbsp;
+            <i class="fa fa-ban" aria-hidden="true"></i>
+        </button>
+        <button class="save-button" mz-button [flat]="true" mz-modal-close
+        (click)="handleEdit()">Save
+            &nbsp;&nbsp;
+            <i class="fa fa-check" aria-hidden="true"></i>
+        </button>
+      </mz-modal-footer>
+  </mz-modal>
+</form>
+
+
+

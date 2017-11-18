@@ -1,0 +1,36 @@
+app-login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+#login-page {
+  width: 350px;
+}
+
+
+/* Edit product form */
+#login-page .input-field .prefix.active {
+  color: #ccab5c!important;
+}
+#login-page input:focus {
+  border-bottom: 1px solid #ccab5c!important;
+  box-shadow: 0px 1px 0px 0px #ccab5c!important;
+}
+#login-page input:focus + label {
+  color: #ccab5c!important;
+}
+
+#login-page button {
+  background: #424242!important;
+  transition: all .4s ease;
+  color: #fff!important;
+  font-weight: bold;
+  width: 100%;
+}
+#login-page button:hover {
+  background: #ccab5c!important;
+  color: #fff!important;
+}
+

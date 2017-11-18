@@ -1,0 +1,40 @@
+.opener {
+  background-color: #424242;
+  color: #eee;
+  text-align: center;
+}
+
+.opener::after {
+  display: block;
+  content: "";
+  border-top: 80vh solid #424242;
+  border-left: 100vw solid transparent;
+  background-color: #E0E0E0;
+}
+
+.wrapper {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper > div {
+  flex: 1;
+}
+
+.left > img {
+  width: 40%;
+}
+.right > a {
+  display: inline-block;
+  width: 25%;
+  transition-duration: .5s;
+  border-radius: 50px;
+}
+.right > a:hover {
+  background: #212121;
+}
+.right > a > img {
+  width: 100%;
+}
+

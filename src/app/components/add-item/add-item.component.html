@@ -1,0 +1,33 @@
+<mz-card
+[hoverable]="true">
+  <mz-card-title>
+    Add Products
+  </mz-card-title>
+  <mz-card-content>
+    <form (ngSubmit)="onSubmit()" class="col s12">
+      <div class="add-product-form">
+        <div class="input-field">
+          <input id="product_name" type="text" class="validate"
+          [(ngModel)]="item.ProductName" name="ProductName">
+          <label for="product_name">Product Name</label>
+        </div>
+        <div class="input-field">
+          <input id="barcode" type="text" class="validate"
+          [(ngModel)]="item.Barcode" name="Barcode">
+          <label for="barcode">Barcode (optional)</label>
+        </div>
+        <div class="input-field">
+          <input id="product_price" type="number" step=any class="validate"
+          [(ngModel)]="item.Price" name="Price">
+          <label for="product_price">Price</label>
+        </div>
+        <div class="input-field">
+          <button class="add-product-btn" type="submit">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            &nbsp;Add
+          </button>
+        </div>
+      </div>
+    </form>
+  </mz-card-content>
+</mz-card>
